@@ -13,11 +13,7 @@
 </head>
 <body>
 
-    @include('inc.header')
-
-    <main>
-        @yield('content')
-    </main>
+    @yield('content')
     
     @include('inc.footer')
 
