@@ -2,9 +2,14 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Up Study</title>
+    <title>@yield('title')</title>
     <link rel="icon" href="img/UpStudyIcon.png">
     <link rel="stylesheet" href="css/home.css"> 
+
+    @yield('style')
+
+    @yield('scripts')
+
 </head>
 <body>
 
