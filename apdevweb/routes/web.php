@@ -30,3 +30,11 @@ Route::get('/contato', function () {
 Route::get('/recuperarSenha', function () {
     return view('recuperarSenha', ['title' => 'Recuperar Senha']);
 });
+
+Route::resource('messages', 'MessageController')->only([
+    'store'
+]);
+
+Route::get('/mensagemSucesso', function() {
+    return view('mensagemSucesso', ['title' => 'Mensagem enciada com sucesso']);
+});
