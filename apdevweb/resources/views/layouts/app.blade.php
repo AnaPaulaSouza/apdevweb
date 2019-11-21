@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>@yield('title')</title>
+    <title>{{ $title }}</title>
     <link rel="icon" href="img/UpStudyIcon.png">
     <link rel="stylesheet" href="css/home.css"> 
 

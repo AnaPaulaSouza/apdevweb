@@ -1,10 +1,5 @@
 @extends('layouts.app')
 
-@section('title')
-Login
-@endsection
-
-
 @section('style')
     <link rel="stylesheet" href="css/menubar.css">
     <link rel="stylesheet" href="css/index.css">
