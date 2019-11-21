@@ -12,21 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Up Study']);
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('login', ['title' => 'Login']);
 });
 
 Route::get('/cadastro', function () {
-    return view('cadastro');
+    return view('cadastro', ['title' => 'Cadastro']);
 });
 
 Route::get('/contato', function () {
-    return view('contato');
+    return view('contato', ['title' => 'Contato']);
 });
 
 Route::get('/recuperarSenha', function () {
-    return view('recuperarSenha');
+    return view('recuperarSenha', ['title' => 'Recuperar Senha']);
 });

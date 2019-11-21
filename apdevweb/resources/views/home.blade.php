@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('title')
-Up Study
-@endsection
-
 @section('content')
     <section class="secao-inicio">
         <p class="bemVindo"><span class="bemVindo-inicio">Seja Bem-Vindo ao </span><strong>Up Study</strong></p>
