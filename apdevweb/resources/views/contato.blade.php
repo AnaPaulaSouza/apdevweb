@@ -10,34 +10,28 @@
 
     @include('inc.menu')
 
-    <form class="form" method="POST" action="menu.html">
+    <h1>@lang('messages.contactUs')</h1>
 
-        <h1>Fale conosco</h1>
-
+    {{ Form::open(array('route' => 'messages.store', 'class' => 'form')) }}
         <p>
-            <label for="nome"></label>
-            <input type="text" placeholder="Nome" required>
+            {{ Form::text('name', '', array('placeholder' => __('messages.name'))) }}
         </p>
 
         <p>
-            <label for="telefone"></label>
-            <input type="tel" placeholder="Telefone">
+            {{ Form::text('phone', '', array('placeholder' => __('messages.phone'))) }}
         </p>
 
         <p>
-            <label for="email"></label>
-            <input type="email" placeholder="E-mail" required>
-        </p>
-            
-        <p>
-            <label for="assunto"></label>
-            <textarea class="mensagem" name="assunto" placeholder="Mensagem" required></textarea>
+            {{ Form::email('email', '', array('placeholder' => __('messages.email'))) }}
         </p>
 
         <p>
-            <input class="logar" type="submit" value="Enviar">
+            {{ Form::textarea('message', '', array('placeholder' => __('messages.message'))) }}
         </p>
-        
-    </form>
+
+        <p>
+            {{ Form::submit(__('messages.send')) }}
+        </p>
+    {{ Form::close() }}
 
 @endsection
