@@ -38,3 +38,5 @@ Route::resource('messages', 'MessageController')->only([
 Route::get('/mensagemSucesso', function() {
     return view('mensagemSucesso', ['title' => 'Mensagem enciada com sucesso']);
 });
+
+Auth::routes();
