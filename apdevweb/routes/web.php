@@ -31,6 +31,10 @@ Route::get('/sobre', function () {
     return view('sobre', ['title' => 'Sobre']);
 });
 
+Route::get('/minhasMaterias', function () {
+    return view('minhasMaterias', ['title' => 'minhasMaterias']);
+});
+
 Route::get('/recuperarSenha', function () {
     return view('recuperarSenha', ['title' => 'Recuperar Senha']);
 });

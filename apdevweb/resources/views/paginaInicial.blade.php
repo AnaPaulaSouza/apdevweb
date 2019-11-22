@@ -10,8 +10,8 @@
 
     <div class="holder">
         <div class="imagem">
-            <a href="minhas-materias.html"><img class="materias" src="img/materias.jpg" alt="Materias"></a>
-            <a href="minhas-materias.html"><h2 class="legenda-materias">Minhas Materias</h2></a>
+            <a href="/minhasMaterias"><img class="materias" src="img/materias.jpg" alt="Materias"></a>
+            <a href="/minhasMaterias"><h2 class="legenda-materias">Minhas Materias</h2></a>
         </div>
         <div class="imagem">
             <a href="#"><img class="documentos" src="img/doc2.jpg" alt="Documentos"></a>
@@ -26,7 +26,7 @@
             <a href="#"><h2 class="legenda-perg-resp">Perguntas e Respostas</h2></a>
         </div>
     </div>
-             <!--COLOCAR NA TELA DE MINHAS MATERIAS<a class="botao-index" href="compartilhe.html">Compartilhe</a>-->
+             
     <main>
             <section class="secao-inicio">
                 <ul style="list-style-type: none;" class="icones-redes-sociais">
