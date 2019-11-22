@@ -10,30 +10,33 @@
 
     @include('inc.menu')
 
-    <form class="form" method="POST" action="pagina-inicial.html">
-        <h1>Login</h1>
+    <h1>Login</h1>
+
+    {{ Form::open(array('route' => 'login', 'class' => 'form')) }}
         <p>
-            <label for="email_login"></label>
-            <input type="email" placeholder="Seu e-mail">
+            {{ Form::email('email', '', array('placeholder' => __('messages.yourEmail'))) }}
         </p>
+
         <p>
-            <label for="senha_login"></label>
-            <input type="password" placeholder="Sua senha">
+            {{ Form::password('password', array('placeholder' => __('messages.yourPassword'))) }}
         </p>
-        <p class="manterlogado">
-            <input type="checkbox" name="manterlogado" id="manterlogado" value="">
-            <label for="manterlogado">Manter-me logado.</label>
-            <a class="recupearSenha" href="/recuperarSenha"> Esqueceu sua senha?</a>
+
+        <p class='manterlogado'>
+            {{ Form::checkbox('remember') }}
+            {{ Form::label('remember', __('messages.rememberMe'))}}
+            <a class="recupearSenha" href="/recuperarSenha">@lang('messages.forgotYourPassword')</a>
         </p>
+
         <p>
-            <input class="logar" type="submit" placeholder="Acessar">
+            {{ Form::submit(__('messages.login')) }}
         </p>
 
         <div>
             <p>
-                <a class="semConta" href="/cadastro">Ainda não tem acesso?<strong> Cadastre-se</strong></a>
+                <a class="semConta" href="/cadastro">Ainda não tem acesso? <strong>@lang('messages.Register')</strong></a>
             </p>
         </div>
-    </form>
+
+    {{ Form::close() }}
 
 @endsection

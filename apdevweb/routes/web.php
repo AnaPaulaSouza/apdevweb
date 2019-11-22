@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Up Study']);
+    return view('home');
 });
 
-Route::get('/login', function () {
+Route::get('/loginPage', function () {
     return view('login', ['title' => 'Login']);
 });
 
@@ -36,7 +36,11 @@ Route::resource('messages', 'MessageController')->only([
 ]);
 
 Route::get('/mensagemSucesso', function() {
-    return view('mensagemSucesso', ['title' => 'Mensagem enciada com sucesso']);
+    return view('mensagemSucesso', ['title' => __('messages.messageSentSuccessfully')]);
 });
+
+Route::get('/paginaInicial', function() {
+    return view('paginaInicial');
+})->middleware('auth');
 
 Auth::routes();
