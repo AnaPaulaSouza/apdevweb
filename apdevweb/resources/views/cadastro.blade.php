@@ -14,38 +14,30 @@
 
     @include('inc.menu')
 
-    <form action="/action_page.php">
-        <h1>Cadastre-se</h1>
+    <h1>Cadastre-se</h1>
+
+    {{ Form::open(array('route' => 'register', 'class' => 'form')) }}
 
         <p>
-            <label for="nome"></label>
-            <input type="text" placeholder="Nome" required>
+            {{ Form::text('name', '', array('placeholder' => __('messages.name'))) }}
         </p>
 
         <p>
-            <label for="nome"></label>
-            <input type="text" placeholder="Sobrenome" required>
+            {{ Form::email('email', '', array('placeholder' => __('messages.email'))) }}
         </p>
 
         <p>
-            <label for="email"></label>
-            <input type="email" placeholder="E-mail" required>
+            {{ Form::password('password', array('placeholder' => __('messages.password'))) }}
         </p>
 
         <p>
-            <label for="senha"></label>
-            <input type="password" id="senha" name="senha-contato" placeholder="Senha" minlength="8" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="no minimo uma letra maiúscula e uma minúscula além de um carácter especial e um numero com 8 ou mais caracteres"> 
+            {{ Form::password('password_confirmation', array('placeholder' => __('messages.confirmPassword'))) }}
         </p>
 
         <p>
-            <label for="senha1"></label>
-            <input type="password" id="senha1" name="senha1-contato" placeholder="Confirme a senha" minlength="8" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="no minimo uma letra maiúscula e uma minúscula além de um carácter especial e um numero com 8 ou mais caracteres">
+            {{ Form::submit(__('messages.send')) }}
         </p>
 
-        <p>
-            <input class="logar" type="submit" value="Enviar">
-        </p>
-
-    </form>
+    {{ Form::close() }}
 
 @endsection
