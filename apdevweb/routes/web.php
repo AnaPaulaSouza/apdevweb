@@ -27,6 +27,10 @@ Route::get('/contato', function () {
     return view('contato', ['title' => 'Contato']);
 });
 
+Route::get('/sobre', function () {
+    return view('sobre', ['title' => 'Sobre']);
+});
+
 Route::get('/recuperarSenha', function () {
     return view('recuperarSenha', ['title' => 'Recuperar Senha']);
 });
